@@ -10,6 +10,9 @@ test.py
 # dataset for project
 dataset/
 
+# senstive information such as password and api keys
+credential.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
