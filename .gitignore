@@ -1,6 +1,13 @@
 # environment variable files
 newspipeline-env/
 
+# interative ipynb
+dev/
+
+# test files
+test.py
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
