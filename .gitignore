@@ -7,6 +7,8 @@ dev/
 # test files
 test.py
 
+# dataset for project
+dataset/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
