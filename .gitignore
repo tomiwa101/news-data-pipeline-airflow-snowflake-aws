@@ -10,6 +10,10 @@ test.py
 # dataset for project
 dataset/
 
+
+# ariflow bad set-up
+airflow/
+
 # senstive information such as password and api keys
 credential.py
 
