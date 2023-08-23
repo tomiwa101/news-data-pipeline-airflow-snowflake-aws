@@ -1,5 +1,6 @@
 # environment variable files
 newspipeline-env/
+venv-news-dp/
 
 # interative ipynb
 dev/

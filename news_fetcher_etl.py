@@ -67,12 +67,11 @@ def runner():
     df1 = df.drop_duplicates()
 
     filename = str(uuid.uuid4())
-    dir = '/Users/tomiwa/Desktop/DE/DataEngineering/Projects/news-data-pipeline-airflow-snowflake-aws/dataset/' # correct path for ec2 '/home/ubuntu/'
+    dir = '/Users/tomiwa/Desktop/DE/DataEngineering/main_projects/news-data-pipeline-airflow-snowflake-aws/dataset/' # correct path for ec2 '/home/ubuntu/'
 
     output_file = f'{dir+filename}.parquet'
     
     df1.to_parquet(output_file)
 
     return output_file
-
 
