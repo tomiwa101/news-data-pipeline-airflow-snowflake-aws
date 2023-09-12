@@ -27,7 +27,9 @@ def runner():
     response = requests.get(url, headers=headers)
 
     # Check the response
-    if response.status_code != 200: print("API request failed with status code:", response.status_code, "\n", "Error message:", response.text)
+    if response.status_code != 200: 
+        print("API request failed with status code:", response.status_code, "\n", "Error message:", response.text)
+        quit()
     data = response.json()
     print("API response:", response.status_code)
     
@@ -44,7 +46,7 @@ def runner():
         urlToImage = news['urlToImage']
 
         # clean content value
-        content = news['content']
+        # content = news['content']
         if news['content'] is not None:
             content = news['content'][:199]
         if '.' in content:
@@ -67,7 +69,7 @@ def runner():
     df1 = df.drop_duplicates()
 
     filename = str(uuid.uuid4())
-    dir = '/Users/tomiwa/Desktop/DE/DataEngineering/main_projects/news-data-pipeline-airflow-snowflake-aws/dataset/' # correct path for ec2 '/home/ubuntu/'
+    dir = '/home/ubuntu/dataset/'  # old path '/Users/tomiwa/Desktop/DE/DataEngineering/main_projects/news-data-pipeline-airflow-snowflake-aws/dataset/'
 
     output_file = f'{dir+filename}.parquet'
     

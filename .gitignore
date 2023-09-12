@@ -2,11 +2,18 @@
 newspipeline-env/
 venv-news-dp/
 
+# ssh key
+*.pem
+
 # interative ipynb
 dev/
 
+# snowflakes database set up
+news_dwh.sql
+
 # test files
 test.py
+test.sql
 
 # dataset for project
 dataset/

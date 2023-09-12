@@ -5,7 +5,8 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
 from airflow.utils.dates import days_ago
 from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
-from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
+# from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
+from airflow.providers.common.sql.hooks.sql import SqlHook
 # from airflow.contrib.operators.snowflake_operator import SnowflakeOperator
 # from airflow.contrib.hooks.snowflake_hook import SnowflakeHook
 
@@ -54,4 +55,4 @@ with dag:
     )
 
 
-    
+extract_news_info >> move_file_to_s3
